@@ -36,6 +36,10 @@ body {
     max-width: 20%;
     height:120px;
 }
+.index-img {
+    width: auto;
+    height: auto;
+}
 
 hr {
     margin: 25px 0;
