@@ -9,36 +9,56 @@ body {
 
 .container {
     max-width: 960;
-    margin: 0 auto;
+    margin: 2 auto;
 }
 
 .navbar {
-    background-color: lightslategray;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    margin-top: 15px;
+    background-color: #51421549;  
+    color: rgb(240, 240, 87);
+    display: flex;     /* By using flex the objects are automatically placed side by side, not on top of each other */
+    flex-wrap: wrap;    /* Essentially tells the item if there isn't enough space, move onto the next line */
+    align-items: center;        /* This aligns the items in the center vertically */
+    align-content: center;                 /* This aligns the content within the item in the center vertically */
+    justify-content: space-between;    /* This controls how much space is between all the items and the web side */
+    padding: 15px;
+    gap: 10px;
+}
+
+.links {
+    background-color: #aeac97;
+    color: white;   
+    display: flex;     /* By using flex the objects are automatically placed side by side, not on top of each other */
+    flex-wrap: wrap;        /* Essentially tells the item if there isn't enough space, move onto the next line */
+    justify-content: center;      /* Justify content controls the space or positioning of items in a row */
+    gap: 10px;              
+    padding: 10px;
+    border-radius: 0 0 20px 20px;      /* This curves the edges of the item/box */
 }
 
 .nav-link {
-    color:yellow;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 3px;
+    color: rgb(239, 236, 45);
+    text-decoration: none;          /* Because the text already had fonts/sizes, etc i made it default again without the underlines for the links  */
+    background-color: #70878c;
+    border: 1px solid #70878c;       
+    border-radius: 6px;     /* Again, curves edges */
+    padding: 10px 15px;
+    text-align: center;      /* Makes the text align in the center and grow from there, not left or right */
+    
 }
 
 .nav-link:hover {
-    background-color: rgba(255,255,255, 0.15);
+    background-color: rgba(83, 74, 74, 0.872);
+    border: none;
+    border-radius: none;
 }
 
 .logo {
     max-width: 20%;
-    height: 110px;
+    height: 100px;
 }
+
 .index-img {
-    max-width: 20%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -63,7 +83,7 @@ hr {
 }
 
 .btn:hover {
-    background-color: #3b1a1d;
+    background-color: #85383e;
 }
 
 .page-header {
@@ -75,7 +95,43 @@ hr {
     text-align: center;
 }
 
-.center-img {
-    display: block;
-    margin: 15 auto;
+.img-box {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 16 / 9;
+    margin: 40px auto;
+    background-color: #5141314d;
+    border-radius: 6px;
+    box-shadow: 10px 10px #5141314d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* This is for the image size within the centered boxes */
+.img-box img {
+    width: 90%;  /* By using % instead of px, this has become flexible within the sizing of the screen */
+    height: 90%;
+    object-fit: contain;  /* This command means that when putting the image in the box, don't stretch or squish it... */
+}
+
+
+
+@media (max-width: 768px) {   /* This max-width of 768px is the size of ipads tablets and mobile screens... This only kicks in when the screen size becomes smaller than 768px. */
+
+    .navbar {
+        flex-direction: column;  /* At the max-width, the navbar will now be stacked in columns not rows... */
+        align-items: stretch;   /* This also specifically tells it to stretch to the full size no matter the size under 768px */
+    }
+
+    .links {
+        flex-direction: column;    /* Same for the rest of these big sections... stacked in columns not rows...  */
+    }
+
+    .flex-row {
+        flex-direction: column;
+    }
+
+    .box-data {
+        flex-direction: column;
+    }
 }
