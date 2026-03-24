@@ -29,7 +29,7 @@ body {
     color: white;   
     display: flex;     /* By using flex the objects are automatically placed side by side, not on top of each other */
     flex-wrap: wrap;        /* Essentially tells the item if there isn't enough space, move onto the next line */
-    justify-content:baseline;      /* Justify content controls the space or positioning of items in a row */
+    justify-content:center;      /* Justify content controls the space or positioning of items in a row */
     gap: 10px;              
     padding: 10px;
     border-radius: 0 0 20px 20px;      /* This curves the edges of the item/box */
