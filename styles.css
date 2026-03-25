@@ -4,45 +4,45 @@
 
 body {
     font-family: sans-serif;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .container {
-    max-width: 960px;
+    max-width: auto;
     margin: 0 auto;
 }
 
 .navbar {
     background-color: #51421549;  
     color: rgb(240, 240, 87);
-    display: flex;     /* By using flex the objects are automatically placed side by side, not on top of each other */
-    flex-wrap: wrap;    /* Essentially tells the item if there isn't enough space, move onto the next line */
-    align-items: center;        /* This aligns the items in the center vertically */
-    align-content: center;                 /* This aligns the content within the item in the center vertically */
-    justify-content: space-between;    /* This controls how much space is between all the items and the web side */
-    padding: 15px;
+    display: flex;     
+    flex-wrap: wrap;   
+    align-items: center;        
+    align-content: center;             
+    justify-content: space-between;   
+    padding: 10px;
     gap: 10px;
 }
 
 .links {
     background-color: #aeac97;
     color: white;   
-    display: flex;     /* By using flex the objects are automatically placed side by side, not on top of each other */
-    flex-wrap: wrap;        /* Essentially tells the item if there isn't enough space, move onto the next line */
-    justify-content: center;      /* Justify content controls the space or positioning of items in a row */
+    display: flex;    
+    flex-wrap: wrap;       
+    justify-content: center;     
     gap: 10px;              
     padding: 10px;
-    border-radius: 0 0 20px 20px;      /* This curves the edges of the item/box */
+    border-radius: 0 0 20px 20px;      
 }
 
 .nav-link {
     color: rgb(239, 236, 45);
-    text-decoration: none;          /* Because the text already had fonts/sizes, etc i made it default again without the underlines for the links  */
+    text-decoration: none;          
     background-color: #70878c;
     border: 1px solid #70878c;       
-    border-radius: 6px;     /* Again, curves edges */
+    border-radius: 6px;    
     padding: 10px 15px;
-    text-align: center;      /* Makes the text align in the center and grow from there, not left or right */
+    text-align: center;     
     
 }
 
@@ -53,8 +53,8 @@ body {
 }
 
 .logo {
-    max-width: 20%;
-    height: 100px;
+    max-width: 35%;
+    height: 35%;
 }
 
 .index-img {
@@ -107,24 +107,26 @@ hr {
     justify-content: center;
     align-items: center;
 }
-/* This is for the image size within the centered boxes */
+
 .img-box img {
-    width: 90%;  /* By using % instead of px, this has become flexible within the sizing of the screen */
+    width: 90%; 
     height: 90%;
-    object-fit: contain;  /* This command means that when putting the image in the box, don't stretch or squish it... */
+    object-fit: contain;  
 }
 
 
 
-@media (max-width: 768px) {   /* This max-width of 768px is the size of ipads tablets and mobile screens... This only kicks in when the screen size becomes smaller than 768px. */
+@media (max-width: 768px) { 
 
     .nav-bar {
-        flex-direction: column;  /* At the max-width, the navbar will now be stacked in columns not rows... */
-        align-items: stretch;   /* This also specifically tells it to stretch to the full size no matter the size under 768px */
+        flex-direction: column;  
+        align-items: stretch;  
     }
 
+    
+
     .links {
-        flex-direction: column;    /* Same for the rest of these big sections... stacked in columns not rows...  */
+        flex-direction: column;   
     }
 
     .flex-row {
